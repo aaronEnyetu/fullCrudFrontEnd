@@ -1,0 +1,4 @@
+.Contact {
+    background-color: rgb(96, 184, 243);
+    height: calc(100vh - var(--header-height));
+}

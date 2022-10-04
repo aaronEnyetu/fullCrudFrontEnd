@@ -1,0 +1,16 @@
+.Navigation {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+ /* a {
+    text-decoration: none;
+    color: rgb(43, 3, 48);
+ } */
