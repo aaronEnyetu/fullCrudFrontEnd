@@ -16,16 +16,15 @@ export default function App() {
     <Router>
       <UserProvider>
         <Routes>
-          <Route path="auth" element={<Auth />}>
-            <Route index element={<AuthForm mode="signin" />} />
-            <Route
-              path="signup"
-              element={<AuthForm mode="signup" />}
-            />
-          </Route>
-
-          <Route element={<Layout />}>
-            <Route index element={<Dashboard />} />
+          <Route element={<Layout />} path="/">
+            <Route element={<Auth />}>
+              <Route index element={<AuthForm mode="signin" />} />
+              <Route
+                path="/auth/signup"
+                element={<AuthForm mode="signup" />}
+              />
+            </Route>
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />

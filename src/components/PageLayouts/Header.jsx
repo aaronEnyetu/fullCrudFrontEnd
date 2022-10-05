@@ -1,13 +1,13 @@
 import Navigation from './Navigation.jsx';
-// import User from './User.jsx';
+import User from './User.jsx';
 import styles from './Header.css';
-// import SlideoutMenu from './SlideoutMenu.jsx';
+import SlideoutMenu from './SlideoutMenu.jsx';
 
 export default function Header() {
   return (
     <header className={styles.Header}>
       <div className={styles.MenuContainer}>
-        {/* <SlideoutMenu /> */}
+        <SlideoutMenu />
       </div>
 
       <h1>My App</h1>
@@ -16,7 +16,7 @@ export default function Header() {
         <Navigation />
       </div>
 
-      {/* <User /> */}
+      <User />
     </header>
   );
 }
