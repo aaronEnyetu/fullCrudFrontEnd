@@ -1,7 +1,5 @@
+import styles from './Dashboard.css';
+
 export default function Dashboard() {
-  return (
-    <div>
-      <h2>Hello World</h2>
-    </div>
-  );
+  return <div className={styles.Dashboard}>Dashboard</div>;
 }
