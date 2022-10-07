@@ -16,7 +16,7 @@ export default function App() {
     <Router>
       <UserProvider>
         <Routes>
-          <Route element={<Auth />}>
+          <Route path="auth" element={<Auth />}>
             <Route index element={<AuthForm mode="signin" />} />
             <Route
               path="signup"
