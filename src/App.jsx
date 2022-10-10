@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Auth from './components/Auth/Auth.jsx';
 import AuthForm from './components/Auth/AuthForm.jsx';
 import UserProvider from './state/UserContext.jsx';
+import ProtectedRoute from './Auth/ProtectedRoute.jsx';
 
 export default function App() {
   return (
@@ -24,32 +25,14 @@ export default function App() {
             />
           </Route>
 
-          <Route element={<Layout />}>
-            <Route index element={<Dashboard />} />
+          <Route element={<ProtectedRoute />}>
+            <Route element={<Layout />}>
+              <Route index element={<Dashboard />} />
+            </Route>
           </Route>
-
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </UserProvider>
     </Router>
   );
 }
-
-// <Router>
-//   <UserProvider>
-//     <Routes>
-//       <Route element={<Layout />} path="/">
-//         <Route element={<Auth />}>
-//           <Route index element={<AuthForm mode="signin" />} />
-//           <Route
-//             path="/auth/signup"
-//             element={<AuthForm mode="signup" />}
-//           />
-//         </Route>
-//         <Route path="/dashboard" element={<Dashboard />} />
-//       </Route>
-
-//       <Route path="*" element={<Navigate to="/" replace />} />
-//     </Routes>
-//   </UserProvider>
-// </Router>
