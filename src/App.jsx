@@ -10,7 +10,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Auth from './components/Auth/Auth.jsx';
 import AuthForm from './components/Auth/AuthForm.jsx';
 import UserProvider from './state/UserContext.jsx';
-import ProtectedRoute from './Auth/ProtectedRoute.jsx';
+import ProtectedRoute from './components/Auth/ProtectedRoute.jsx';
 
 export default function App() {
   return (
