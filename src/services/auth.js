@@ -4,7 +4,7 @@ const URL = '/api/v1/users';
 
 export async function signUpUser(credentials) {
   const response = await post(`${URL}/`, credentials);
-  response.user = response.data;
+
   return response;
 }
 

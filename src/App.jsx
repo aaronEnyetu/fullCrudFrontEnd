@@ -12,6 +12,8 @@ import AuthForm from './components/Auth/AuthForm.jsx';
 import UserProvider from './state/UserContext.jsx';
 import ProtectedRoute from './components/Auth/ProtectedRoute.jsx';
 import { ShoppingList } from './components/Lists/ShoppingList.jsx';
+import { Lists } from './components/Lists/Lists.jsx';
+import ListsProvider from './state/ListsContext.jsx';
 
 export default function App() {
   return (
@@ -29,7 +31,12 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route index element={<Dashboard />} />
-              <Route path=":id" element={<ShoppingList />} />
+              <Route element={<ListsProvider />}>
+                <Route path="lists">
+                  <Route index element={<Lists />} />
+                  <Route path=":id" element={<ShoppingList />} />
+                </Route>
+              </Route>
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
