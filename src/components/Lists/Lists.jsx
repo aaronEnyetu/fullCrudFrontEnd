@@ -9,7 +9,7 @@ export function Lists() {
   if (!lists) return null;
 
   const handleAdd = async (name) => {
-    await addList({ name });
+    await addList(name);
   };
 
   return (

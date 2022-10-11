@@ -10,7 +10,7 @@ export default function Auth() {
 
   return (
     <main className={styles.Auth}>
-      <h1>Shopping List</h1>
+      <h1>Shopping List App</h1>
       <Outlet />
     </main>
   );
