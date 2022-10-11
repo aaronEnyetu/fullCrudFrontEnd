@@ -41,6 +41,7 @@ export default function ListsProvider({ children }) {
   }, []);
 
   const addList = (list) => {
+    console.log('List', list);
     setLists((lists) => [...lists, list]);
     setListsById((listsById) => ({
       ...listsById,

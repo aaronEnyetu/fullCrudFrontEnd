@@ -9,7 +9,7 @@ export function Lists() {
   if (!lists) return null;
 
   const handleAdd = async (name) => {
-    await addList(name);
+    await addList({ description: name });
   };
 
   return (
@@ -22,7 +22,7 @@ export function Lists() {
         {lists.map((list) => {
           return (
             <li key={list.id}>
-              <Link to={`${list.id}`}>{list.name}</Link>
+              <Link to={`${list.id}`}>{list.description}</Link>
             </li>
           );
         })}
